@@ -1,0 +1,84 @@
+﻿<Window x:Class="Universal_Bitmap.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Universal_Bitmap"
+        mc:Ignorable="d"
+        Title="Universal Bitmap - v2017.4.12.1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" WindowStartupLocation="CenterScreen" Width="800" Height="800">
+    <Grid>
+        <DockPanel LastChildFill="False" VerticalAlignment="Top" Width="auto">
+            <DockPanel.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuBarColorKey}}"/>
+            </DockPanel.Background>
+            <Menu x:Name="File" Height="21" VerticalAlignment="Top" Width="34" Margin="0,0,0,-0.2" Background="{x:Null}">
+                <MenuItem Header="File" Width="34" Padding="7,2,0,3">
+                    <MenuItem.Foreground>
+                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuTextColorKey}}"/>
+                    </MenuItem.Foreground>
+                    <MenuItem Header="Open Bitmap" Padding="2,3,0,3" Grid.IsSharedSizeScope="True">
+                        <MenuItem.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuTextColorKey}}"/>
+                        </MenuItem.Foreground>
+                        <MenuItem.Background>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </MenuItem.Background>
+                    </MenuItem>
+                    <MenuItem Header="Save Bitmaps">
+                        <MenuItem.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlTextColorKey}}"/>
+                        </MenuItem.Foreground>
+                        <MenuItem.Background>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </MenuItem.Background>
+                    </MenuItem>
+                    <MenuItem Header="Save Quantity Maps">
+                        <MenuItem.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlTextColorKey}}"/>
+                        </MenuItem.Foreground>
+                        <MenuItem.Background>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </MenuItem.Background>
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+            <Menu x:Name="View" Height="21" VerticalAlignment="Top" Width="40" Margin="0,0,0,-0.2" Background="{x:Null}">
+                <MenuItem Header="View" Width="40">
+                    <MenuItem.Foreground>
+                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuTextColorKey}}"/>
+                    </MenuItem.Foreground>
+                </MenuItem>
+            </Menu>
+            <Menu x:Name="Options" Height="21" VerticalAlignment="Top" Width="58" Margin="0,0,0,-0.2" Background="{x:Null}">
+                <MenuItem Header="Options" Width="58">
+                    <MenuItem.Foreground>
+                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuTextColorKey}}"/>
+                    </MenuItem.Foreground>
+                </MenuItem>
+            </Menu>
+            <Menu x:Name="menu3" Height="21" VerticalAlignment="Top" Width="43" Margin="0,0,0,-0.2" Background="{x:Null}">
+                <MenuItem Header="Help" Width="43">
+                    <MenuItem.Foreground>
+                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuTextColorKey}}"/>
+                    </MenuItem.Foreground>
+                    <MenuItem Header="Software Guide" HorizontalAlignment="Left">
+                        <MenuItem.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuTextColorKey}}"/>
+                        </MenuItem.Foreground>
+                    </MenuItem>
+                    <MenuItem Header="About Universal Bitmap" HorizontalAlignment="Left">
+                        <MenuItem.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuTextColorKey}}"/>
+                        </MenuItem.Foreground>
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <Button x:Name="button" Content="Draw Bitmap" HorizontalAlignment="Left" Margin="281,735,0,0" VerticalAlignment="Top" Width="110" Click="DrawPixel"/>
+        <Viewbox HorizontalAlignment="Left" Height="100" Margin="218,340,0,0" VerticalAlignment="Top" Width="100"/>
+        <ScrollViewer HorizontalAlignment="Right" Margin="0,26,9.6,0" VerticalAlignment="Top" PanningMode="Both" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Width="774" Height="704">
+            <Image x:Name="BitmapImage" HorizontalAlignment="Left" Height="704" VerticalAlignment="Top" Width="774" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" RenderTransformOrigin="0.5,0.5" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+        </ScrollViewer>
+        <Button x:Name="button1" Content="Scale Bitmap" HorizontalAlignment="Left" Margin="405,735,0,0" VerticalAlignment="Top" Width="120" Click="ScaleBitmap"/>
+    </Grid>
+</Window>
